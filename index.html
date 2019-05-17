@@ -36,11 +36,11 @@
         const socket = io();
 
         $('#enterName').submit(function(e){
-            e.preventDefault();
-            socket.emit('new user', $('#userName').val(), function(data){
-              $('#nameContainer').hide();
-              $('#messageContainer').show();
-              $('userName').val('');
+          e.preventDefault();
+          socket.emit('new user', $('#userName').val(), function(data){
+            $('#nameContainer').hide();
+            $('#messageContainer').show();
+            $('userName').val('');
           });
 
           $('form').submit(function(e){
@@ -56,7 +56,5 @@
         });
       })
     </script>
-  </body>
-  
   </body>
 </html>
